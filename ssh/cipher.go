@@ -125,6 +125,8 @@ var cipherModes = map[string]*cipherMode{
 	// You should expect that an active attacker can recover plaintext if
 	// you do.
 	aes128cbcID: {16, aes.BlockSize, newAESCBCCipher},
+	// Hacked-in support for aes256-cbc
+	aes256cbcID: {32, aes.BlockSize, newAESCBCCipher},
 
 	// 3des-cbc is insecure and is not included in the default
 	// config.

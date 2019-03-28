@@ -31,6 +31,7 @@ var supportedCiphers = []string{
 	chacha20Poly1305ID,
 	"arcfour256", "arcfour128", "arcfour",
 	aes128cbcID,
+	aes256cbcID,
 	tripledescbcID,
 }
 
@@ -121,7 +122,7 @@ func (a *directionAlgorithms) rekeyBytes() int64 {
 	// 2^(BLOCKSIZE/4) blocks. For all AES flavors BLOCKSIZE is
 	// 128.
 	switch a.Cipher {
-	case "aes128-ctr", "aes192-ctr", "aes256-ctr", gcmCipherID, aes128cbcID:
+	case "aes128-ctr", "aes192-ctr", "aes256-ctr", gcmCipherID, aes128cbcID, aes256cbcID:
 		return 16 * (1 << 32)
 
 	}
