@@ -5,7 +5,7 @@
 package packet
 
 import (
-	"golang.org/x/crypto/openpgp/errors"
+	"github.com/newmannh/crypto/openpgp/errors"
 	"io"
 )
 
